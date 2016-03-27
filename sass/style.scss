@@ -84,10 +84,10 @@ p.n-title2 {background: url(../images/n-title2.png) no-repeat;width: 214px/$ppr;
 section.wrong,section.right {background-color: #f3c720;position: relative;}
 .wrong .girl {animation: shake 800ms 1000ms infinite alternate ease-in-out;-webkit-animation: shake 800ms infinite alternate ease-in-out;background: url(../images/girl.png) no-repeat;width: 551px/$ppr;height: 380px/$ppr;left: 50%;top: 326px/$ppr;margin-left: -275px/$ppr;}
 .wrong p {text-indent: -100rem;}
-.wrong .text {background: url(../images/no.png) no-repeat;width: 219px/$ppr;height: 27px/$ppr;top: 270px/$ppr;left: 100px/$ppr;}
+.wrong .text {border:none;background: url(../images/no.png) no-repeat;width: 219px/$ppr;height: 27px/$ppr;top: 270px/$ppr;left: 100px/$ppr;}
 .wrong .text2 {animation: fadeToScale 1300ms both ease-in-out;background: url(../images/text2.png) no-repeat;width: 435px/$ppr;height: 88px/$ppr;top: 689px/$ppr;left: 50%;margin-left: -217px/$ppr;}
 .wrong .arrow,.right .arrow {animation: flow 300ms infinite ease-in-out;-webkit-animation: flow 300ms infinite ease-in-out;background: url(../images/arrow.png) no-repeat;width: 50px/$ppr;height: 29px/$ppr;left: 50%;top: 919px/$ppr;margin-left: -25px/$ppr;}
-.wrong a,.right a {    color: #000;
+.wrong a,.right a {    color: #000;font-size: 50px;
     text-align: center;
     line-height: 1.9rem;
     letter-spacing: 10px;font-family: "microsoft yahei";background: url(../images/button.png) no-repeat;display: block;width: 361px/$ppr;height: 99px/$ppr;left: 50%;top: 960px/$ppr;margin-left: -3.81333rem;}
