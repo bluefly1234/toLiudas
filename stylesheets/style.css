@@ -26,6 +26,7 @@ html, body {
 .loading-dog {
   background: url(../images/loading.png) no-repeat;
   animation: move 300ms steps(2) infinite both;
+  -webkit-animation: move 300ms steps(2) infinite both;
   margin: 50% auto 0;
   width: 107px;
   height: 127px; }
@@ -342,7 +343,7 @@ section.wrong, section.right {
 .wrong .arrow, .right .arrow {
   animation: flow 300ms infinite ease-in-out;
   -webkit-animation: flow 300ms infinite ease-in-out;
-  background: url(../temp/arrow.png) no-repeat;
+  background: url(../images/arrow.png) no-repeat;
   width: 1.06667rem;
   height: 0.61867rem;
   left: 50%;
