@@ -7,7 +7,7 @@ html,body {font-size: $ppr*1rem;width: 100%;height: 100%;}
 
 /*----------------loading-----------------*/
 .loading {background-color: #f3c720;}
-.loading-dog {background: url(../images/loading.png) no-repeat;animation: move 300ms steps(2) infinite both;margin: 50% auto 0;width: 107px;height: 127px;}
+.loading-dog {background: url(../images/loading.png) no-repeat;animation: move 300ms steps(2) infinite both;-webkit-animation: move 300ms steps(2) infinite both;margin: 50% auto 0;width: 107px;height: 127px;}
 .loading p {text-align: center;font-family: "microsoft yahei";}
 
 
@@ -86,7 +86,7 @@ section.wrong,section.right {background-color: #f3c720;position: relative;}
 .wrong p {text-indent: -100rem;}
 .wrong .text {background: url(../images/no.png) no-repeat;width: 219px/$ppr;height: 27px/$ppr;top: 270px/$ppr;left: 100px/$ppr;}
 .wrong .text2 {animation: fadeToScale 1300ms both ease-in-out;background: url(../images/text2.png) no-repeat;width: 435px/$ppr;height: 88px/$ppr;top: 689px/$ppr;left: 50%;margin-left: -217px/$ppr;}
-.wrong .arrow,.right .arrow {animation: flow 300ms infinite ease-in-out;-webkit-animation: flow 300ms infinite ease-in-out;background: url(../temp/arrow.png) no-repeat;width: 50px/$ppr;height: 29px/$ppr;left: 50%;top: 919px/$ppr;margin-left: -25px/$ppr;}
+.wrong .arrow,.right .arrow {animation: flow 300ms infinite ease-in-out;-webkit-animation: flow 300ms infinite ease-in-out;background: url(../images/arrow.png) no-repeat;width: 50px/$ppr;height: 29px/$ppr;left: 50%;top: 919px/$ppr;margin-left: -25px/$ppr;}
 .wrong a,.right a {    color: #000;
     text-align: center;
     line-height: 1.9rem;
