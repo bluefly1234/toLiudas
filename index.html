@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">	
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/parallax.css"/>
+		<link rel="stylesheet" type="text/css" href="css/parallax-animation.css"/>
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/touch.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/parallax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/motion.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mobile-util.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<section class="wrapper">
+			<div class="pages">
+			<section class="page loading">
+				<div class="loading-dog"></div>
+				<p></p>
+			</section>
+			<section class="page slide1">
+				<h1 class="i-title" data-animation="fadeInToBottom" data-duration="1000" data-delay="200" >据说——今天是某人生日？！</h1>
+				<section class="i-dog" data-animation="slideToRight" data-duration="1000" data-delay="600"></section>
+				<section class="i-text-bg" data-animation="fadeInToBottom" data-duration="1000"></section>
+				<section class="star" data-animation="fadeIn" data-duration="1000" data-delay="400"></section>
+			</section>
+			
+			<section class="page slide2">
+				<h1 class="n-title" data-animation="fadeInToBottom" data-duration="1000" data-delay="400">想要surprise咩?</h1>
+				<p class="n-title2" data-animation="followSlide" data-duration="1000" data-delay="400">ready?</p>
+				<section class="n-text-bg1" data-animation="followSlide" data-duration="1000"></section>
+				<section class="n-text-bg2" data-animation="followSlide" data-duration="1000" data-delay="300"></section>
+				<section class="n-dog1" data-animation="slideToRight" data-duration="1000" data-delay="700" ></section>
+				<section class="n-dog2" data-animation="slideToLeft" data-duration="1000" data-delay="800" ></section>
+				<section class="n-dog3" data-animation="slideToRight" data-duration="1000" data-delay="500" ></section>
+				<section class="n-dog4" data-animation="slideToLeft" data-duration="1000" data-delay="600" ></section>
+				<audio src="music/receive.mp3"></audio>
+				<audio src="music/send.mp3"></audio>
+			</section>
+			
+			<section class="page slide3">
+				<div class="chatInterface">
+					<div class="content"></div>
+					 <span id="msg_end" style="display:inline-block;overflow:hidden;margin-top: 60%;"></span>
+				</div>
+				<div class="inputInterface" data-animation="slideToTop" data-duration="1000">
+					<div class="panel">
+						<a class="btnRecord"></a>
+						<span class="text"></span>
+						<a class="btnFace"></a>
+						<a class="btnSend">发送</a>	
+					</div>
+					<div class="answ">
+						<p data-animation="slideToLeft" data-duration="1000" data-delay="400"></p>
+						<p data-animation="slideToLeft" data-duration="1000" data-delay="500"></p>
+						<p data-animation="slideToLeft" data-duration="1000" data-delay="600"></p>
+						<p data-animation="slideToLeft" data-duration="1000" data-delay="700"></p>
+					</div>
+				</div>
+			</section>	
+			</div>
+		</section>
+	</body>
+	
+	<script>
+	
+		//预加载
+		var sourceArr = [
+			'images/answ.png',
+			'images/arrow.png',
+			'images/bg.png',
+			'images/FullSizeRender.jpg',
+			'images/girl.png',
+			'images/star.png',
+			'images/button.png',
+			'images/head.png',
+			'images/head2.png',
+			'images/i-dog.png',
+			'images/n-dog1.png',
+			'images/n-dog2.png',
+			'images/n-dog3.png',
+			'images/n-dog4.png',
+			'images/n-text-bg1.png',
+			'images/n-text-bg2.png',
+			'images/r-dog.png',
+			'images/text2.png',
+			'images/n-title.png',
+			'images/n-title2.png',
+			'images/i-title.png',
+			'images/i-text-bg.png',
+			'music/wrong.mp3',
+			'music/audio4.mp3'
+		];
+	
+		var loadQA = false;
+
+		var loader = new mo.Loader(sourceArr,{
+			onLoading : function(count,total){
+				$('.loading p').text('Loading '+Math.floor((count/total)*100) + '%')
+			},
+			onComplete : function(time){
+				$('.loading').remove();
+				$('.pages').parallax({
+					drag: false, 
+					onchange: function(index, element, direction){
+						if($(element).index()===2&&!loadQA){
+							loadQA= true;
+							setQA();
+						}
+					}
+				});
+			}
+		})
+		
+		
+		
+		
+		//问答部分
+		//提问
+		function setQA(){
+			$.ajax({
+			type:"get",
+			url:"QA/questions.json",
+			success: function(ques){
+				var current = 0;
+				var askBox = '<div class="chatQ clear" data-animation="slideToRight" data-duration="1000"><span class="head"></span><span class="question">'+ques[current].content+'</span></div>';
+				$(askBox).appendTo('.chatInterface .content');
+				setTimeout(function(){
+					$('audio')[0].play();
+				},1000)
+				$.ajax({
+					type:"get",
+					url:"QA/answers.json",
+					success: function(ans){
+						var currentNum=0;
+						var tempI=0;
+						for(var i=0,lens=4;i<lens;i++){
+							$('.answ p').eq(i).text(ans[current].answer[i]);
+						}
+						$('.answ p').tap(function(){	
+							$('.panel .text').text($(this).text());
+							currentNum=$(this).index()+1;
+						})
+						$('.btnSend').tap(function(){
+							var currentText=$('.panel .text').text();
+							$('.panel .text').text('');
+							//$('.chatInterface').scrollTop($('.chatInterface')[0].scrollHeight)
+							$('#msg_end')[0].scrollIntoView(false)
+							var answerBox = '<div class="chatA clear"><span class="head"></span><span class="answer">'+currentText+'</span></div>';
+							$(answerBox).appendTo('.chatInterface .content');
+							$('audio')[1].play();
+							if(currentNum===ans[current].rightNo){
+								if(current<4){
+									current++;
+									var askBox = '<div class="chatQ clear" style="animation: fadeIn 1000ms ease 0ms both;"><span class="head"></span><span class="question">'+ques[current].content+'</span></div>';
+									setTimeout(function(){
+										$(askBox).appendTo('.chatInterface .content');
+										$('audio')[0].play();
+									},500)	
+									for(var i=0,lens=4;i<lens;i++){
+										$('.answ p').eq(i).text(ans[current].answer[i]);
+									}
+								}else{
+									var h = document.documentElement.clientHeight;
+									var rightPage = '<section class="current right" style="width:100%;height:'+h+'px"><section class="r-dog"></section><p class="r-text">不错~竟然都正确了……<br/>来——<br/>听听大家对你满满的爱吧</p><section class="arrow"></section><a href="#">点击收听</a><section class="bg-music" ></section></section>'
+									$(rightPage).appendTo('.pages');
+									$('.pages .page').remove()
+										$('.pages').css({
+										'transform':'translateY(0)'
+									}) 
+									var audio = '';
+									$('.right a').on('tap',function(){	
+										if(!audio){
+											audio = new mo.Audio({
+											src: 'music/audio4.mp3',
+											controller: $('.bg-music'),
+											fillColor: '#000000',
+											loop: false
+											// useWebAudio: false
+										});
+										}
+										$('.r-text').remove();
+										if(audio.currentTime>90){
+											audio.stop();
+											audio.play();
+										}
+										return false;	
+									})
+								}	
+							}else{
+								var h = document.documentElement.clientHeight;
+								var currentHref= window.location.href;
+								var wrongPage = '<section class="current wrong" style="width:100%;height:'+h+'px"><audio src="music/wrong.mp3" autoplay loop></audio><p class="text">nonono~</p><section class="girl"></section><p class="text2">错啦不哭</p><section class="arrow"></section><a href="#">来多一次</a></section>';
+								$(wrongPage).appendTo('.pages');
+								$('.pages .page').remove()
+								$('.pages').css({
+									'transform':'translateY(0)'
+								})	
+								$('.wrong a').on('tap',function(){
+									window.location.reload();
+									return false;
+								})
+							}
+						})
+					}
+				});
+			}
+		})
+	}
+	</script>
+</html>
