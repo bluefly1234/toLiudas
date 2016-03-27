@@ -14,12 +14,8 @@ html, body {
   height: 100%; }
 
 /* line 6, ../sass/style.scss */
-.page, .right, .wrong {
+.page {
   position: relative; }
-
-/* line 7, ../sass/style.scss */
-.right, .wrong {
-  display: none; }
 
 /*----------------loading-----------------*/
 /* line 9, ../sass/style.scss */
