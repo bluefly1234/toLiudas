@@ -2,9 +2,9 @@ $ppr: 750px/16/1rem;
 
 html,body {font-size: $ppr*1rem;width: 100%;height: 100%;}
 .wrap {position: absolute; }
-.wrap,.page {width: 100%;height: 100%;}
-.page {position: relative;}
-
+.wrap,.page, .right, .wrong {width: 100%;height: 100%;}
+.page,.right,.wrong  {position: relative;}
+.right,.wrong {display: none;}
 /*----------------loading-----------------*/
 .loading {background-color: #f3c720;}
 .loading-dog {background: url(../images/loading.png) no-repeat;animation: move 300ms steps(2) infinite both;-webkit-animation: move 300ms steps(2) infinite both;margin: 50% auto 0;width: 107px;height: 127px;}

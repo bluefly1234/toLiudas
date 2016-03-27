@@ -55,6 +55,8 @@
 					</div>
 				</div>
 			</section>	
+			<section class="current right" ><section class="r-dog"></section><p class="r-text">不错~竟然都正确了……<br/>来——<br/>听听大家对你满满的爱吧</p><section class="arrow"></section><a href="#">点击收听</a><section class="bg-music" ></section></section>
+			<section class="current wrong" ><audio src="music/wrong.mp3" autoplay loop></audio><p class="text">nonono~</p><section class="girl"></section><p class="text2">错啦不哭</p><section class="arrow"></section><a href="#">来多一次</a></section>
 			</div>
 		</section>
 	</body>
@@ -124,11 +126,11 @@
 			url:"QA/questions.json",
 			success: function(ques){
 				var current = 0;
-				var askBox = '<div class="chatQ clear" data-animation="slideToRight" data-duration="1000"><span class="head"></span><span class="question">'+ques[current].content+'</span></div>';
+				var askBox = '<div class="chatQ clear" style="animation: slideToRight 1000ms ease 0ms both;"><span class="head"></span><span class="question">'+ques[current].content+'</span></div>';
 				$(askBox).appendTo('.chatInterface .content');
 				setTimeout(function(){
 					$('audio')[0].play();
-				},1000)
+				},500)
 				$.ajax({
 					type:"get",
 					url:"QA/answers.json",
@@ -163,8 +165,8 @@
 									}
 								}else{
 									var h = document.documentElement.clientHeight;
-									var rightPage = '<section class="current right" style="width:100%;height:'+h+'px"><section class="r-dog"></section><p class="r-text">不错~竟然都正确了……<br/>来——<br/>听听大家对你满满的爱吧</p><section class="arrow"></section><a href="#">点击收听</a><section class="bg-music" ></section></section>'
-									$(rightPage).appendTo('.pages');
+									
+									$('.pages .right').show();
 									$('.pages .page').remove()
 										$('.pages').css({
 										'transform':'translateY(0)'
@@ -190,9 +192,8 @@
 								}	
 							}else{
 								var h = document.documentElement.clientHeight;
-								var currentHref= window.location.href;
-								var wrongPage = '<section class="current wrong" style="width:100%;height:'+h+'px"><audio src="music/wrong.mp3" autoplay loop></audio><p class="text">nonono~</p><section class="girl"></section><p class="text2">错啦不哭</p><section class="arrow"></section><a href="#">来多一次</a></section>';
-								$(wrongPage).appendTo('.pages');
+								
+								$('.pages .wrong').show();
 								$('.pages .page').remove()
 								$('.pages').css({
 									'transform':'translateY(0)'
