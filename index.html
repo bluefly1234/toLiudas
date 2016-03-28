@@ -93,7 +93,7 @@
 				scale = (winW/375).toString().substring(0, 6);
 			}
 		var currentW = $('.container').width()*scale/2;	
-	    var cssText = '-webkit-transform: scale('+ scale +'); -webkit-transform-origin:top left; opacity:1;margin-left:-'+currentW+'px';
+	    var cssText = 'margin-left:-'+currentW+'px;-webkit-transform: scale('+ scale +'); -webkit-transform-origin:top left; opacity:1';
 			$('.container').attr('style', cssText);
 		};
 		setTimeout(function() {
