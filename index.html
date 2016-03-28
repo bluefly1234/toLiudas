@@ -214,12 +214,12 @@
 									$('.right a').on('tap',function(){	
 										if(!audio){
 											audio = new mo.Audio({
-											src: 'music/audio4.mp3',
-											controller: $('.bg-music'),
-											fillColor: '#000000',
-											loop: false
-											// useWebAudio: false
-										});
+												src: 'music/demo.mp3',
+												controller: $('.bg-music'),
+												fillColor: '#000000',
+												loop: false
+												// useWebAudio: false
+											});
 										}
 										$('.r-text').remove();
 										if(audio.currentTime>90){
