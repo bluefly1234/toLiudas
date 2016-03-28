@@ -92,7 +92,8 @@
 			} else {
 				scale = (winW/375).toString().substring(0, 6);
 			}
-	    var cssText = '-webkit-transform: scale('+ scale +') translateX(-50%); -webkit-transform-origin:top left; opacity:1;';
+		var currentW = $('.container').width()*scale/2;	
+	    var cssText = '-webkit-transform: scale('+ scale +'); -webkit-transform-origin:top left; opacity:1;margin-left:-'+currentW+'px';
 			$('.container').attr('style', cssText);
 		};
 		setTimeout(function() {
@@ -184,8 +185,8 @@
 						$('.btnSend').tap(function(){
 							var currentText=$('.panel .text').text();
 							$('.panel .text').text('');
-							//$('.chatInterface').scrollTop($('.chatInterface')[0].scrollHeight)
-							$('#msg_end')[0].scrollIntoView(false)
+							$('.chatInterface')[0].scrollTop=$('.chatInterface')[0].scrollHeight
+							//$('#msg_end').trigger('click')
 							var answerBox = '<div class="chatA clear"><span class="head"></span><span class="answer">'+currentText+'</span></div>';
 							$(answerBox).appendTo('.chatInterface .content');
 							$('audio')[1].play();
