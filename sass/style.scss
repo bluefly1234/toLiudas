@@ -1,117 +1,116 @@
-$ppr: 750px/16/1rem;
 
-html,body {font-size: $ppr*1rem;width: 100%;height: 100%;}
-.wrap {position: absolute; }
-.wrap,.page, .right, .wrong {width: 100%;height: 100%;}
-.page {position: relative;}
-
+html,body {width: 100%;height: 100%;}
+.wrap {margin: 0 auto;}
+.pages {width: 100%;height: 100%;}
+.wrap,.page, .right, .wrong {width: 100%;height: 100%;position: relative;}
+.container {width: 375px;height: 100%;left: 50%;position: relative;opacity: 0;}
 /*----------------loading-----------------*/
 .loading {background-color: #f3c720;}
-.loading-dog {background: url(../images/loading.png) no-repeat;animation: move 300ms steps(2) infinite both;-webkit-animation: move 300ms steps(2) infinite both;margin: 50% auto 0;width: 107px;height: 127px;}
+.loading-dog {background: url(../images/loading.png) no-repeat;animation: move 300ms steps(2) infinite both;-webkit-animation: move 300ms steps(2) infinite both;margin: 50% auto 0;width: 53.5px;height: 63.5px;}
 .loading p {text-align: center;font-family: "microsoft yahei";}
 
 
 /*----------------slide1-----------------*/
-.slide1 {background:url(../images/bg.png) no-repeat;background-size: cover;}
+.slide1 {background:url(../images/bg.png) no-repeat;background-size: 100%;}
 .clear::after {content: "";display: block;clear: both;overflow: hidden;}
 
-.i-dog {background: url(../images/i-dog.png) no-repeat;width: 595px/$ppr;height: 522px/$ppr;left: 0;bottom: 0;}  
-.i-text-bg {background: url(../images/i-text-bg.png) no-repeat;width: 744px/$ppr;height: 327px/$ppr;top: 420px/$ppr;}  
+.i-dog {background: url(../images/i-dog.png) no-repeat;width: 79.3%;height: 43.2%;left: 0;bottom: 0;}  
+.i-text-bg {background: url(../images/i-text-bg.png) no-repeat;width: 372px;height: 163.5px;left: 50%;margin-left:-186px;top: 161.5px;}  
  
 
 .other-ar {background: url(../images/other-ar.png) no-repeat;}  
-.star {background: url(../images/star.png) no-repeat;width: 494px/$ppr;height: 602px/$ppr;position: absolute;top: 200px/$ppr;left: 152px/$ppr;} 
-.slide1 h1, .slide2 h1, .slide2 p {text-indent: -10000px/$ppr;}
-.i-title {background: url(../images/i-title.png) no-repeat;width: 586px/$ppr;height: 206px/$ppr;top: 500px/$ppr;left: 108px/$ppr;z-index: 10;}
+.star {background: url(../images/star.png) no-repeat;width: 247px;height: 301px;position: absolute;top: 36px;left: 76px;} 
+.slide1 h1, .slide2 h1, .slide2 p {text-indent: -10000px;}
+.i-title {background: url(../images/i-title.png) no-repeat;width: 293px;height: 103px;top: 192.5px;left: 50%;margin-left:-146.5px;z-index: 10;}
 
 
 /*----------------slide2-----------------*/
 .slide2 {background-color: #f3c720;}
-.n-dog1 {background: url(../images/n-dog1.png) no-repeat; bottom: 0;left: 0; width: 362px/$ppr;height: 364px/$ppr;}  
-.n-dog2 {background: url(../images/n-dog2.png) no-repeat; bottom: 0;right: 0; width: 361px/$ppr;height: 362px/$ppr;}  
-.n-dog3 {background: url(../images/n-dog3.png) no-repeat; top: 0;left: 0; width: 359px/$ppr;height: 335px/$ppr;}  
-.n-dog4 {background: url(../images/n-dog4.png) no-repeat; top: 0;right: 0; width: 361px/$ppr;height: 325px/$ppr;}
-.n-text-bg1 {background: url(../images/n-text-bg1.png) no-repeat;width: 616px/$ppr;height:429px/$ppr;top: 390px/$ppr;left: 59px/$ppr;}  
-.n-text-bg2 {background: url(../images/n-text-bg2.png) no-repeat;width: 424px/$ppr;height: 60px/$ppr;top: 826px/$ppr;left: 152px/$ppr;}  
-h1.n-title {background: url(../images/n-title.png) no-repeat;width: 625px/$ppr;height: 247px/$ppr;top: 464px/$ppr;left: 83px/$ppr;z-index: 10;}
-p.n-title2 {background: url(../images/n-title2.png) no-repeat;width: 214px/$ppr;height: 60px/$ppr;top: 820px/$ppr;left: 274px/$ppr;z-index: 10;}
+.n-dog1 {background: url(../images/n-dog1.png) no-repeat; bottom: 0;left: 0; width: 48.266%;height: 30.182%;}  
+.n-dog2 {background: url(../images/n-dog2.png) no-repeat; bottom: 0;right: 0; width: 48.133%;height: 30.016%;}  
+.n-dog3 {background: url(../images/n-dog3.png) no-repeat; top: 0;left: 0; width: 48%;height: 27.778%}  
+.n-dog4 {background: url(../images/n-dog4.png) no-repeat; top: 0;right: 0; width: 48%;height: 26.948%}
+.n-text-bg1 {background: url(../images/n-text-bg1.png) no-repeat;width: 308px;height:214.5px;top: 175px;left: 50%;margin-left: -154px;}  
+.n-text-bg2 {background: url(../images/n-text-bg2.png) no-repeat;width: 212px;height: 30px;top: 396px;left: 50%;margin-left: -106px;}  
+h1.n-title {background: url(../images/n-title.png) no-repeat;width: 312.5px;height: 123.5px;top: 210px;left: 50%;margin-left: -156px;z-index: 10;}
+p.n-title2 {background: url(../images/n-title2.png) no-repeat;width: 107px;height: 30px;top: 392px;left: 50%;margin-left: -53.5px;z-index: 10;}
 
 /*----------------slide3-----------------*/
-.slide3 {background: url(../images/FullSizeRender.jpg) no-repeat center center;}
+.slide3 {background: url(../images/FullSizeRender.jpg) no-repeat center center;background-size: contain;}
 .inputInterface {width: 100%;height: 40%;background-color: #f5f5f7;bottom: 0;position: absolute;}
-.panel { padding: 15px/$ppr;
+.panel { padding: 7.5px;
     border-top: 1px solid #f3f4f6;
     border-bottom: 1px solid #bcbbc1;
     position: relative;
     overflow: hidden;}
 .answ {width: 100%;
-    padding-top: 0.2rem;
+    padding-top: 5px;
     }
-.answ p {font-size: 30px;text-indent: 30px/$ppr;font-family:"microsoft yahei";line-height: 90px/$ppr;margin: 0 auto;background-image: url(../images/answ.png);width: 591px/$ppr;height: 90px/$ppr;background-size: cover;}
+.answ p {font-size: 15px;text-indent: 15px;font-family:"microsoft yahei";line-height: 45px;margin: 0 auto;background-image: url(../images/answ.png);width: 295.5px;height: 45px;background-size: cover;}
 .text {display: inline-block;
-    width: 420px/$ppr;
-    height: 35px/$ppr;
-    line-height: 35px/$ppr;
-    padding: 10px/$ppr;
+    width: 210px;
+    height: 17.5px;
+    line-height: 17.5px;
+    padding: 5px;
     border: 1px solid #c5c5c7;
-    border-radius: 10px/$ppr;
+    border-radius: 5px;
     background-color: #fefefe;
     color: #000;
-    font-size: .65rem;
-    margin-left: .15rem;
+    font-size: 15px;
     font-family: "microsoft yahei";
     float: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin: 0 20px/$ppr;}
-.btnFace {display: inline-block;width: 50px/$ppr;height: 50px/$ppr;background: url(../images/btn-face.png) no-repeat;}
-.btnRecord {float: left;display: inline-block;width: 50px/$ppr;height: 50px/$ppr;background: url(../images/btn-recored.png) no-repeat;} 
-.btnSend {width: 120px/$ppr;height: 55px/$ppr;line-height: 55px/$ppr;text-align: center;font-size: 32px;background-color: #45c01a;
-    color: #fff;display: inline-block;float: right;border-radius: 10px/$ppr;font-family: "microsoft yahei"}
-.chatInterface {padding: 50px/$ppr 20px/$ppr;overflow: scroll;max-height: 55%;}
-.chatQ .head {background: url(../images/head.png) no-repeat;} 
-.chatA .head {background: url(../images/head2.png) no-repeat;} 
-.head {width: 82px/$ppr;height: 82px/$ppr;background-size: cover;}
-.question, .answer {max-width: 450px/$ppr;padding: 30px/$ppr 20px/$ppr;font-size: 30px;font-family: "microsoft yahei";background-color: #fff;border-radius: 10px/$ppr;border: 1px solid #C5C5C7;}
+    margin: 0 10px 0 35px;}
+.btnFace {display: inline-block;width: 25px;height: 25px;background: url(../images/btn-face.png) no-repeat;}
+.btnRecord {float: left;display: inline-block;width: 25px;height: 25px;background: url(../images/btn-recored.png) no-repeat;} 
+.btnSend {width: 60px;height: 27.5px;line-height: 27.5px;text-align: center;font-size: 16px;background-color: #45c01a;
+    color: #fff;display: inline-block;float: right;border-radius: 5px;font-family: "microsoft yahei"}
+.chatInterface {padding: 25px 10px;overflow: scroll;max-height: 55%;}
+.head {width: 41px;height: 41px;}
+.chatQ .head {background: url(../images/head.png) no-repeat;background-size: 100% 100%;} 
+.chatA .head {background: url(../images/head2.png) no-repeat;background-size: 100% 100%;} 
+
+.question, .answer {max-width: 225px;padding: 15px 10px;font-size: 15px;font-family: "microsoft yahei";background-color: #fff;border-radius: 5px;border: 1px solid #C5C5C7;}
 .question {float: left;}
 .answer {float: right;}
-.chatQ .head {float: left;margin-right: 30px/$ppr;}
-.chatA .head {float: right;margin-left: 30px/$ppr;}
-.chatInterface div {margin-bottom: 30px/$ppr;}
+.chatQ .head {float: left;margin-right: 15px;}
+.chatA .head {float: right;margin-left: 15px;}
+.chatInterface div {margin-bottom: 15px;}
 
 /*----------------wrong-----------------*/
 section.wrong,section.right {background-color: #f3c720;position: relative;}
-.wrong .girl {animation: shake 800ms 1000ms infinite alternate ease-in-out;-webkit-animation: shake 800ms infinite alternate ease-in-out;background: url(../images/girl.png) no-repeat;width: 551px/$ppr;height: 380px/$ppr;left: 50%;top: 326px/$ppr;margin-left: -275px/$ppr;}
-.wrong p {text-indent: -100rem;}
-.wrong .text {border:none;background: url(../images/no.png) no-repeat;width: 219px/$ppr;height: 27px/$ppr;top: 270px/$ppr;left: 100px/$ppr;}
-.wrong .text2 {animation: fadeToScale 1300ms both ease-in-out;background: url(../images/text2.png) no-repeat;width: 435px/$ppr;height: 88px/$ppr;top: 689px/$ppr;left: 50%;margin-left: -217px/$ppr;}
-.wrong .arrow,.right .arrow {animation: flow 300ms infinite ease-in-out;-webkit-animation: flow 300ms infinite ease-in-out;background: url(../images/arrow.png) no-repeat;width: 50px/$ppr;height: 29px/$ppr;left: 50%;top: 919px/$ppr;margin-left: -25px/$ppr;}
-.wrong a,.right a {    color: #000;font-size: 50px;
+.wrong .girl {animation: shake 800ms 1000ms infinite alternate ease-in-out;-webkit-animation: shake 800ms infinite alternate ease-in-out;background: url(../images/girl.png) no-repeat;width: 275.5px;height: 190px;left: 50%;top: 129px;margin-left: -137.75px;}
+.wrong p {text-indent: -10000px;}
+.wrong .text {border:none;background: url(../images/no.png) no-repeat;width: 109.5px;height: 13.5px;top: 102.5px;left: 61px;}
+.wrong .text2 {animation: fadeToScale 1300ms both ease-in-out;background: url(../images/text2.png) no-repeat;width: 217.5px;height: 44px;top: 310.5px;left: 50%;margin-left: -108.5px;}
+.wrong .arrow,.right .arrow {animation: flow 300ms infinite ease-in-out;-webkit-animation: flow 300ms infinite ease-in-out;background: url(../images/arrow.png) no-repeat;width: 25px;height: 14.5px;left: 50%;top: 420px;margin-left: -12.5px;}
+.wrong a,.right a {   color: #000;font-size: 25px;
     text-align: center;
-    line-height: 1.9rem;
-    letter-spacing: 10px;font-family: "microsoft yahei";background: url(../images/button.png) no-repeat;display: block;width: 361px/$ppr;height: 99px/$ppr;left: 50%;top: 960px/$ppr;margin-left: -3.81333rem;}
+    line-height: 49.5px;
+   letter-spacing: 5px;font-family: "microsoft yahei";background: url(../images/button.png) no-repeat;display: block;width: 180.5px;height: 49.5px;left: 50%;top: 450px;margin-left: -87px;}
 
 /*----------------right-----------------*/
-.right .r-dog {animation: fadeToScale 1300ms both ease-in-out;background: url(../images/r-dog.png) no-repeat;width: 577px/$ppr;height: 622px/$ppr;top: 194px/$ppr;left: 86px/$ppr;}
-.right .r-text {animation: fade 800ms 200ms both;font-family: "microsoft yahei";position: relative;top: 17.621rem;font-size: 42px/$ppr;width: 462px/$ppr;margin: 0 auto;}
-.right .arrow {top: 1065px/$ppr;}
-.right a {animation: fade 800ms 600ms both;top: 1115px/$ppr;}
-.bg-music {position: relative;top: 17.621rem;margin: 0 auto;text-align: center;}
-.bg-music canvas {width: 8rem;}
+.right .r-dog {animation: fadeToScale 1300ms both ease-in-out;-webkit-animation: fadeToScale 1300ms both ease-in-out;background: url(../images/r-dog.png) no-repeat;width: 288.5px;height: 311px;top: 48px;left: 43px;}
+.right .r-text {animation: fade 800ms 200ms both;font-family: "microsoft yahei";position: relative;top: 370px;font-size: 21px;width: 231px;margin: 0 auto;}
+.right .arrow {top: 486px;}
+.right a {animation: fade 800ms 600ms both;top: 496px;}
+.bg-music {position: relative;top: 390px;margin: 0 auto;text-align: center;}
+.bg-music canvas {width: 187.5px;}
 
 
 
-.btnFace, .btnRecored, .i-dog, .i-text-bg, .n-dog1, .n-dog2, .n-dog3, .n-dog4, .n-text-bg1, .n-text-bg2, .other-ar, .star,.i-title,.n-title,.n-title2,.wrong .girl,.wrong p,.wrong .arrow,.wrong a,.right .arrow,.right a,.right .r-dog {position: absolute;background-size: 100% !important;}
+.btnFace, .btnRecord, .i-dog, .i-text-bg, .n-dog1, .n-dog2, .n-dog3, .n-dog4, .n-text-bg1, .n-text-bg2, .other-ar, .star,.i-title,.n-title,.n-title2,.wrong .girl,.wrong p,.wrong .arrow,.wrong a,.right .arrow,.right a,.right .r-dog, .loading-dog {position: absolute;background-size: 100% 100% !important;}
 
 /*----------------animation----------------------------------*/
 @keyframes move {
     0% {background-position: 0 0;}
-    100% {background-position: -214px 0;}
+    100% {background-position: -107px 0;}
 }
 @-webkit-keyframes move {
     0% {background-position: 0 0;}
-    100% {background-position: -214px 0;}
+    100% {background-position: -107px 0;}
 }
 @keyframes fade {
     0% {opacity: 0;}
