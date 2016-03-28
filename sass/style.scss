@@ -6,7 +6,7 @@ html,body {width: 100%;height: 100%;}
 .container {width: 375px;height: 100%;left: 50%;position: relative;opacity: 0;}
 /*----------------loading-----------------*/
 .loading {background-color: #f3c720;}
-.loading-dog {background: url(../images/loading.png) no-repeat;animation: move 300ms steps(2) infinite both;-webkit-animation: move 300ms steps(2) infinite both;margin: 50% auto 0;width: 53.5px;height: 63.5px;}
+.loading-dog {background: url(../images/loading.png) no-repeat;animation: move 300ms steps(2) infinite both;-webkit-animation: move 300ms steps(2) infinite both;margin: 50% auto 0;width: 53.5px;height: 63.5px;background-size: 200%;}
 .loading p {text-align: center;font-family: "microsoft yahei";}
 
 
@@ -101,7 +101,7 @@ section.wrong,section.right {background-color: #f3c720;position: relative;}
 
 
 
-.btnFace, .btnRecord, .i-dog, .i-text-bg, .n-dog1, .n-dog2, .n-dog3, .n-dog4, .n-text-bg1, .n-text-bg2, .other-ar, .star,.i-title,.n-title,.n-title2,.wrong .girl,.wrong p,.wrong .arrow,.wrong a,.right .arrow,.right a,.right .r-dog, .loading-dog {position: absolute;background-size: 100% 100% !important;}
+.btnFace, .btnRecord, .i-dog, .i-text-bg, .n-dog1, .n-dog2, .n-dog3, .n-dog4, .n-text-bg1, .n-text-bg2, .other-ar, .star,.i-title,.n-title,.n-title2,.wrong .girl,.wrong p,.wrong .arrow,.wrong a,.right .arrow,.right a,.right .r-dog {position: absolute;background-size: 100% 100% !important;}
 
 /*----------------animation----------------------------------*/
 @keyframes move {

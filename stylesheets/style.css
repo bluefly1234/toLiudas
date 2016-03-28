@@ -38,7 +38,8 @@ html, body {
   -webkit-animation: move 300ms steps(2) infinite both;
   margin: 50% auto 0;
   width: 53.5px;
-  height: 63.5px; }
+  height: 63.5px;
+  background-size: 200%; }
 
 /* line 10, ../sass/style.scss */
 .loading p {
@@ -426,7 +427,7 @@ section.wrong, section.right {
   width: 187.5px; }
 
 /* line 104, ../sass/style.scss */
-.btnFace, .btnRecord, .i-dog, .i-text-bg, .n-dog1, .n-dog2, .n-dog3, .n-dog4, .n-text-bg1, .n-text-bg2, .other-ar, .star, .i-title, .n-title, .n-title2, .wrong .girl, .wrong p, .wrong .arrow, .wrong a, .right .arrow, .right a, .right .r-dog, .loading-dog {
+.btnFace, .btnRecord, .i-dog, .i-text-bg, .n-dog1, .n-dog2, .n-dog3, .n-dog4, .n-text-bg1, .n-text-bg2, .other-ar, .star, .i-title, .n-title, .n-title2, .wrong .girl, .wrong p, .wrong .arrow, .wrong a, .right .arrow, .right a, .right .r-dog {
   position: absolute;
   background-size: 100% 100% !important; }
 
