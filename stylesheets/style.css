@@ -22,7 +22,6 @@ html, body {
 .container {
   width: 375px;
   height: 100%;
-  left: 50%;
   position: relative;
   opacity: 0; }
 
